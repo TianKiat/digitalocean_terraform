@@ -61,7 +61,7 @@ resource "local_file" "nginx" {
 	})
 }
 
-data "digitalocean_ssh_key" "deepadmin_key" {
+data "digitalocean_ssh_key" "www-1" {
 	name = var.do_ssh_key
 }
 
@@ -71,7 +71,7 @@ resource "digitalocean_droplet" "nginx" {
 	region = var.do_region
 	size = var.do_size
 
-	ssh_keys = [ data.data.digitalocean_ssh_key.deepadmin_key.id ]
+	ssh_keys = [ data.data.digitalocean_ssh_key.www-1.id ]
 
 	connection {
 		type = "ssh"

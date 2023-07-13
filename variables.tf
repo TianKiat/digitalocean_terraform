@@ -49,7 +49,7 @@ variable do_size {
 
 variable do_ssh_key {
 	type = string
-	default = "deepadmin_key"
+	default = "www-1"
 }
 
 variable do_ssh_private_key {
