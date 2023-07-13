@@ -1,4 +1,4 @@
- variable do_token {
+variable do_token {
 	type = string
 	sensitive = true
 }
@@ -43,7 +43,7 @@ variable do_image {
 }
 
 variable do_size {
-	type=string
+	type = string
 	default = "s-1vcpu-512mb-10gb"
 }
 
@@ -55,5 +55,3 @@ variable do_ssh_key {
 variable ssh_private_key {
 	type = string
 }
-
-
