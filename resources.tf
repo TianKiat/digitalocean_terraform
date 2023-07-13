@@ -7,7 +7,7 @@ resource "docker_image" "bgg-backend" {
 	name = "chukmunlee/bgg-backend:${var.backend_version}"
 }
 
-resource "docker_network "bgg-network" {
+resource "docker_network" "bgg-network" {
 	name = "${var.app_namespace}-bgg-net"
 }
 
