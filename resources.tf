@@ -75,7 +75,7 @@ resource "digitalocean_droplet" "nginx" {
 
 	connection {
 		type = "ssh"
-		user = "host"
+		user = "root"
 		private_key = file(var.ssh_private_key)
 		host = self.ipv4_address
 	}
