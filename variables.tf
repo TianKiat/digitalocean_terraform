@@ -52,7 +52,7 @@ variable do_ssh_key {
 	default = "www-1"
 }
 
-variable do_ssh_private_key {
+variable ssh_private_key {
 	type = string
 }
 
