@@ -44,8 +44,8 @@ resource "docker_container" "bgg-backend" {
 
 	env = [
 		"BGG_DB_USER=root",
-		"BGG_DB_PASSWORD=changeit"
-		"BGG_DB_HOST=${docker_container.bgg-database.name}"
+		"BGG_DB_PASSWORD=changeit",
+		"BGG_DB_HOST=${docker_container.bgg-database.name}",
 	]	
 	ports {
 		internal = 3000
@@ -88,7 +88,7 @@ resource "digitalocean_droplet" "nginx" {
 		]
 
 	}
-	provisioner "file {
+	provisioner "file" {
 		source = local_file.nginx-conf.filename
 		destination = "/etc/nginx/nginx.conf"
 	}
